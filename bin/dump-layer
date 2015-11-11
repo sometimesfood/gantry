@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require 'gantry'
+
+require 'rubygems/package'
+require 'pp'
+
+# bundle exec bin/dump-layers 39bb80489af75406073b5364c9c326134015140e1f7976a370a8bd446889e6f8 debian-jessie.tar /tmp/layer-dump
+layer_name = ARGV[0]
+image_file = ARGV[1]
+dump_target = ARGV[2]
+
+layer_path = File.join(layer_name, 'layer.tar')
+image_path = File.expand_path(image_file)
+
+extractor = Gantry::NestedTarExtractor.new(image_path, layer_path)
+puts "Dumping layer #{layer_name} to #{dump_target}..."
+extractor.extract_to(dump_target)
