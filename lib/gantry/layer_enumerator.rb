@@ -11,7 +11,7 @@ module Gantry
     def image_layers
       layers = []
       next_layer = top_layer
-      while next_layer do
+      while next_layer
         layers.unshift(next_layer)
         next_layer = parent_layer(next_layer)
       end
