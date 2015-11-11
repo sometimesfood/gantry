@@ -4,9 +4,9 @@ Deploy docker images on physical machines.
 
 Description
 -----------
-/Please note that this README is a bad case of
+*Please note that this README is a bad case of
 [Readme Driven Development](rdd) (or rather Wishful Programming). None
-of this is actually in working order yet./
+of this is actually in working order yet.*
 
 Gantry deploys docker images to virtual or physical
 machines. Provisioning VMs using gantry allows you to reuse the docker
