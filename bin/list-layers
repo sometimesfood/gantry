@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'gantry'
+
+require 'rubygems/package'
+require 'pp'
+
+# bundle exec bin/list-layers debian jessie debian-jessie.tar
+image_name = ARGV[0]
+image_version = ARGV[1]
+image_file = ARGV[2]
+
+image_reader = Gem::Package::TarReader.new(File.open(image_file))
+enumerator = Gantry::LayerEnumerator.new(image_reader, image_name, image_version)
+puts "Layers of image file #{image_file}:"
+pp enumerator.image_layers
