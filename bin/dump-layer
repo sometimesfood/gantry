@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
-require 'gantry'
-
-require 'rubygems/package'
-require 'pp'
+require 'gantry/nested_tar_extractor'
 
 # bundle exec bin/dump-layers 39bb80489af75406073b5364c9c326134015140e1f7976a370a8bd446889e6f8 debian-jessie.tar /tmp/layer-dump
 layer_name = ARGV[0]

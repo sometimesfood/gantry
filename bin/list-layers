@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'gantry'
+require 'gantry/layer_enumerator'
 
 require 'rubygems/package'
 require 'pp'

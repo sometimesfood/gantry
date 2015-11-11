@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'gantry/image_extractor'
+
+# bundle exec bin/extract-image debian jessie /tmp/layer-dump
+image_name = ARGV[0]
+image_version = ARGV[1]
+dump_target = ARGV[2]
+
+extractor = Gantry::ImageExtractor.new(image_name, image_version)
+puts "Extracting image #{image_name} to #{dump_target}..."
+extractor.extract_to(dump_target)

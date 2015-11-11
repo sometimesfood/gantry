@@ -11,7 +11,7 @@ module Gantry
       @nested_tar_filename = nested_tar_filename
     end
 
-    # @todo: Add error handling
+    # @todo Add error handling
     def extract_to(target_directory)
       FileUtils.mkdir_p(target_directory)
       Dir.chdir(target_directory) do
