@@ -21,7 +21,7 @@ export LVPATH=/dev/${VOLUME_GROUP}/${VMNAME}
 sudo lvcreate -L 5G -n ${VMNAME} ${VOLUME_GROUP}
 sudo mkfs.ext4 ${LVPATH}
 sudo gantry --grub ${LVPATH} \
-    --commmand 'apt-get update' \
+    --command 'apt-get update' \
     --command 'apt-get -y install grub-pc linux-image-amd64' \
     debian:jessie ${LVPATH}
 ```
